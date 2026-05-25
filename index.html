@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩</title>
+<title>𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩</title>
 
-  <meta property="og:title" content="𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩" />
-  <meta property="og:description" content="Premium Editshop" />
-  <meta property="og:image" content="logo.gif" />
-  <meta property="og:type" content="website" />
+<link rel="icon" href="logo.gif">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="logo.gif">
-
-  <style>
+<style>
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -32,17 +30,17 @@ body{
 /* NAVBAR */
 
 nav{
-  width:100%;
   position:fixed;
   top:0;
   left:0;
-  padding:20px 50px;
+  width:100%;
+  padding:18px 40px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  z-index:1000;
-  background:rgba(0,0,0,0.15);
+  background:rgba(0,0,0,0.2);
   backdrop-filter:blur(10px);
+  z-index:999;
 }
 
 nav h2{
@@ -51,7 +49,7 @@ nav h2{
 
 .nav-links{
   display:flex;
-  gap:25px;
+  gap:20px;
 }
 
 .nav-links a{
@@ -62,7 +60,7 @@ nav h2{
 }
 
 .nav-links a:hover{
-  color:#c9a6ff;
+  color:#d1b3ff;
 }
 
 /* HEADER */
@@ -74,9 +72,9 @@ header{
 }
 
 .logo{
-  width:140px;
+  width:130px;
   border-radius:50%;
-  box-shadow:0 0 25px #000;
+  box-shadow:0 0 25px black;
 }
 
 header h1{
@@ -92,10 +90,11 @@ header h1{
 /* PRODUCTS */
 
 .products{
+  width:100%;
+  padding:40px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
-  padding:40px;
 }
 
 .card{
@@ -124,76 +123,91 @@ header h1{
 
 .buy-btn{
   display:inline-block;
-  padding:12px 25px;
-  border-radius:12px;
+  padding:12px 22px;
   background:#8d42ff;
   color:white;
+  border-radius:12px;
   text-decoration:none;
   font-weight:bold;
   transition:0.3s;
 }
 
 .buy-btn:hover{
-  background:#a86cff;
+  background:#a96fff;
 }
 
 .badge{
   background:gold;
   color:black;
-  padding:6px 12px;
+  padding:5px 12px;
   border-radius:20px;
   display:inline-block;
   margin-bottom:15px;
-  font-size:13px;
+  font-size:12px;
   font-weight:bold;
 }
 
 /* RECENT WORK */
 
 #recent-work{
-  padding:80px 40px;
+  padding:70px 20px;
 }
 
 .section-title{
   text-align:center;
-  font-size:40px;
-  margin-bottom:50px;
+  font-size:38px;
+  margin-bottom:40px;
 }
 
 .work-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,240px));
+  justify-content:center;
+  gap:20px;
 }
 
 .work-card{
   background:rgba(255,255,255,0.08);
-  border-radius:20px;
+  border-radius:16px;
   overflow:hidden;
   backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.work-card:hover{
+  transform:translateY(-5px);
 }
 
 .work-card img{
   width:100%;
+  height:135px;
+  object-fit:cover;
   display:block;
 }
 
 .work-info{
-  padding:20px;
+  padding:14px;
 }
 
 .work-info h3{
-  margin-bottom:10px;
+  font-size:17px;
+  margin-bottom:8px;
+}
+
+.work-info p{
+  font-size:13px;
+  opacity:0.8;
 }
 
 .youtube-btn{
   display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
-  border-radius:10px;
+  margin-top:12px;
+  padding:8px 14px;
+  border-radius:8px;
   background:red;
   color:white;
   text-decoration:none;
+  font-size:13px;
   font-weight:bold;
 }
 
@@ -226,7 +240,33 @@ header h1{
   }
 }
 
-  </style>
+/* MOBILE */
+
+@media(max-width:700px){
+
+  nav{
+    padding:15px 20px;
+  }
+
+  nav h2{
+    font-size:16px;
+  }
+
+  .nav-links{
+    gap:15px;
+  }
+
+  header h1{
+    font-size:32px;
+  }
+
+  .products{
+    padding:20px;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
@@ -236,12 +276,14 @@ header h1{
 <!-- NAVBAR -->
 
 <nav>
+
   <h2>𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩</h2>
 
   <div class="nav-links">
     <a href="#">Home</a>
     <a href="#recent-work">Recent Work</a>
   </div>
+
 </nav>
 
 <!-- HEADER -->
@@ -273,6 +315,7 @@ header h1{
   </div>
 
   <div class="card">
+
     <div class="badge">💎 MOST BOUGHT</div>
 
     <h2>Bronze Pack</h2>
@@ -284,6 +327,7 @@ header h1{
     target="_blank">
     Buy Now
     </a>
+
   </div>
 
   <div class="card">
@@ -321,29 +365,42 @@ header h1{
     Buy Now
     </a>
   </div>
-   <!-- EXTRA OPTIONS -->
 
   <div class="card">
-    <h2>(Freecam) Cinematic: </h2>
+    <h2>(Freecam) Cinematic</h2>
     <p>Extra Choice</p>
     <p class="price">+€1.50 extra</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
 
   <div class="card">
-    <h2>(Animatie) Cinematic </h2>
-    <p>Extra Choice </p>
-    <p class="price">+2,50 extra</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="card">
-    <h2>Thumbnail</h2>
+    <h2>(Animatie) Cinematic</h2>
     <p>Extra Choice</p>
-    <p class="price"> +€1 extra</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+    <p class="price">+€2.50 extra</p>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
 
+  <div class="card">
+    <h2>Thumbnail Extra</h2>
+    <p>Extra Choice</p>
+    <p class="price">+€1 extra</p>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
+  </div>
 
 </section>
 
@@ -355,7 +412,7 @@ header h1{
 
   <div class="work-grid">
 
-    <!-- MONTAGE -->
+    <!-- VIDEO 1 -->
 
     <div class="work-card">
 
@@ -365,15 +422,21 @@ header h1{
 
         <h3>Montage Example</h3>
 
-        <p>Amersfoort roleplay montage edited by I Edit Shop.</p>
+        <p>Amersfoort roleplay montage.</p>
 
         <a class="youtube-btn"
         href="https://youtu.be/1akaUMJ-BKE"
         target="_blank">
         Watch Video
         </a>
-        
-        <div class="work-card">
+
+      </div>
+
+    </div>
+
+    <!-- VIDEO 2 -->
+
+    <div class="work-card">
 
       <img src="https://img.youtube.com/vi/K3RpHCUafJE/maxresdefault.jpg">
 
@@ -381,14 +444,21 @@ header h1{
 
         <h3>Montage Example</h3>
 
-        <p>Amersfoort roleplay montage edited by I Edit Shop.</p>
+        <p>Custom montage edit.</p>
 
         <a class="youtube-btn"
-        href="https://youtu.be/lGRHAJHZqV0?si=PZ_ajfbZFqx-vNY7"
+        href="https://youtu.be/K3RpHCUafJE"
         target="_blank">
         Watch Video
         </a>
-        <div class="work-card">
+
+      </div>
+
+    </div>
+
+    <!-- VIDEO 3 -->
+
+    <div class="work-card">
 
       <img src="https://img.youtube.com/vi/lGRHAJHZqV0/maxresdefault.jpg">
 
@@ -396,42 +466,13 @@ header h1{
 
         <h3>Montage Example</h3>
 
-        <p>Amersfoort roleplay montage edited by I Edit Shop.</p>
+        <p>Gaming montage edit.</p>
 
         <a class="youtube-btn"
-        href="https://youtu.be/lGRHAJHZqV0?si=PZ_ajfbZFqx-vNY7"
+        href="https://youtu.be/lGRHAJHZqV0"
         target="_blank">
         Watch Video
         </a>
-        
-        <div class="work-card">
-
-      </div>
-
-    </div>
-
-    <!-- THUMBNAIL -->
-
-    <div class="work-card">
-
-      <img src="https://img.youtube.com/vi/1akaUMJ-BKE/hqdefault.jpg">
-
-      <div class="work-info">
-
-        <h3>Thumbnail Example</h3>
-
-        <p>Custom AFR thumbnail.</p>
-         <div class="work-card">
-
-      <img src=https://img.youtube.com/vi/K3RpHCUafJE/maxresdefault.jpg>
-
-      <div class="work-info">
-
-        <h3>Thumbnail Example</h3>
-
-        <p>Custom AFR thumbnail.</p>
-          <div class="work-card">
-            
 
       </div>
 
