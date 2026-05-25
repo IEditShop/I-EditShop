@@ -1,32 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩</title>
-  <meta property="og:image" content="https://ieditshop.github.io/I-Edit-Shop/logo.gif">
-<meta property="og:image:type" content="image/gif">
-<meta property="og:image:width" content="400">
-<meta property="og:image:height" content="400">
 
   <meta property="og:title" content="𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩" />
-  <meta property="og:description" content="Editshop tools & resources" />
-  <meta property="og:image" content="https://𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩.github.io/FxForge-Editshop/logo.gif" />
-  <meta property="og:url" content="https://𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩.github.io/FxForge-Editshop/" />
+  <meta property="og:description" content="Premium Editshop" />
+  <meta property="og:image" content="logo.gif" />
   <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="logo.gif">
+
+  <style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:linear-gradient(180deg,#5d1eff,#12002b);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  background:rgba(0,0,0,0.15);
+  backdrop-filter:blur(10px);
+}
+
+nav h2{
+  font-size:22px;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#c9a6ff;
+}
+
+/* HEADER */
+
+header{
+  text-align:center;
+  padding-top:140px;
+  padding-bottom:60px;
+}
+
+.logo{
+  width:140px;
+  border-radius:50%;
+  box-shadow:0 0 25px #000;
+}
+
+header h1{
+  margin-top:20px;
+  font-size:45px;
+}
+
+.subtitle{
+  opacity:0.8;
+  margin-top:10px;
+}
+
+/* PRODUCTS */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:40px;
+}
+
+.card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.price{
+  font-size:28px;
+  font-weight:bold;
+  margin:20px 0;
+}
+
+.buy-btn{
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:12px;
+  background:#8d42ff;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.buy-btn:hover{
+  background:#a86cff;
+}
+
+.badge{
+  background:gold;
+  color:black;
+  padding:6px 12px;
+  border-radius:20px;
+  display:inline-block;
+  margin-bottom:15px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+/* RECENT WORK */
+
+#recent-work{
+  padding:80px 40px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:50px;
+}
+
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+.work-card{
+  background:rgba(255,255,255,0.08);
+  border-radius:20px;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+
+.work-card img{
+  width:100%;
+  display:block;
+}
+
+.work-info{
+  padding:20px;
+}
+
+.work-info h3{
+  margin-bottom:10px;
+}
+
+.youtube-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  border-radius:10px;
+  background:red;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* PARTICLES */
+
+#particles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.particle{
+  position:absolute;
+  width:3px;
+  height:3px;
+  background:white;
+  border-radius:50%;
+  animation:float linear infinite;
+}
+
+@keyframes float{
+  from{
+    transform:translateY(100vh);
+  }
+  to{
+    transform:translateY(-100vh);
+  }
+}
+
+  </style>
 </head>
 
 <body>
 
 <div id="particles"></div>
 
+<!-- NAVBAR -->
+
+<nav>
+  <h2>𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩</h2>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#recent-work">Recent Work</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+
 <header>
+
   <img src="logo.gif" class="logo">
+
   <h1>𝐈 | 𝐄𝐝𝐢𝐭 𝐒𝐡𝐨𝐩</h1>
+
   <p class="subtitle">Premium Editshop</p>
+
 </header>
+
+<!-- PRODUCTS -->
 
 <section class="products">
 
@@ -34,77 +264,139 @@
     <h2>Thumbnail</h2>
     <p>Custom YouTube thumbnail</p>
     <p class="price">€1</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
 
-  <div class="card basic">
+  <div class="card">
     <div class="badge">💎 MOST BOUGHT</div>
+
     <h2>Bronze Pack</h2>
     <p>5–10 clips</p>
-    <p class="price">€3,50</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+    <p class="price">€3.50</p>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
 
   <div class="card">
-    <h2>Silver pack</h2>
+    <h2>Silver Pack</h2>
     <p>10–15 clips</p>
     <p class="price">€5.50</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
 
   <div class="card">
-    <h2>Gold  pack</h2>
+    <h2>Gold Pack</h2>
     <p>15–20 clips</p>
     <p class="price">€7.50</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
-   <div class="card">
+
+  <div class="card">
     <h2>Epic Pack</h2>
     <p>20+ clips</p>
     <p class="price">Bespreken in ticket</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
-  </div>
 
-  <!-- EXTRA OPTIONS -->
-
-  <div class="card">
-    <h2>(Freecam) Cinematic: </h2>
-    <p>Extra Choice</p>
-    <p class="price">+€1.50 extra</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="card">
-    <h2>(Animatie) Cinematic </h2>
-    <p>Extra Choice </p>
-    <p class="price">+2,50 extra</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
-  </div>
-
-  <div class="card">
-    <h2>Thumbnail</h2>
-    <p>Extra Choice</p>
-    <p class="price"> +€1 extra</p>
-    <a class="buy-btn" href="https://www.tipeeestream.com/44snsh/donation" target="_blank">Buy Now</a>
+    <a class="buy-btn"
+    href="https://www.tipeeestream.com/44snsh/donation"
+    target="_blank">
+    Buy Now
+    </a>
   </div>
 
 </section>
 
+<!-- RECENT WORK -->
+
+<section id="recent-work">
+
+  <h2 class="section-title">Recent Work</h2>
+
+  <div class="work-grid">
+
+    <!-- MONTAGE -->
+
+    <div class="work-card">
+
+      <img src="https://img.youtube.com/vi/1akaUMJ-BKE/maxresdefault.jpg">
+
+      <div class="work-info">
+
+        <h3>Montage Example</h3>
+
+        <p>Gaming montage edited by I Edit Shop.</p>
+
+        <a class="youtube-btn"
+        href="https://youtu.be/1akaUMJ-BKE"
+        target="_blank">
+        Watch Video
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- THUMBNAIL -->
+
+    <div class="work-card">
+
+      <img src="https://img.youtube.com/vi/1akaUMJ-BKE/hqdefault.jpg">
+
+      <div class="work-info">
+
+        <h3>Thumbnail Example</h3>
+
+        <p>Custom YouTube thumbnail.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PARTICLES -->
+
 <script>
+
 const container = document.getElementById("particles");
 
-for (let i = 0; i < 80; i++) {
+for(let i = 0; i < 80; i++){
+
   const p = document.createElement("div");
+
   p.classList.add("particle");
 
   p.style.left = Math.random() * 100 + "vw";
-  p.style.animationDuration = (6 + Math.random() * 10) + "s";
+
+  p.style.animationDuration =
+  (5 + Math.random() * 10) + "s";
+
   p.style.opacity = Math.random();
 
   container.appendChild(p);
 }
+
 </script>
-<canvas id="particles"></canvas>
-<script src="particles.js"></script>
+
 </body>
 </html>
